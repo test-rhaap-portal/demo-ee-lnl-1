@@ -9,21 +9,6 @@ dependencies:
   python_interpreter:
     python_path: /usr/bin/python3.12
 
-  system:
-    - libssh-devel
-
-  python:
-    - ansible-pylibssh
-
-  galaxy:
-    collections:
-      - name: amazon.aws
-        version: "11.2.0"
-        source: private_hub_rh_certified
-      - name: ansible.controller
-        version: "4.7.10"
-        source: private_hub_rh_certified
-
 additional_build_steps:
   prepend_galaxy:
     - ARG ANSIBLE_GALAXY_SERVER_PRIVATE_HUB_RH_CERTIFIED_TOKEN
